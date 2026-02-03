@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "rubros:block/harvest_gold_block"
+    }
+  }
+}

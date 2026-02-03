@@ -1,4 +1,7 @@
 {
   "item.rubros.gold_coin": "Gold Coin",
-  "item.rubros.harvest_gold_coin": "Harvest Gold Coin"
+  "item.rubros.harvest_gold_coin": "Harvest Gold Coin",
+
+  "block.rubros.harvest_gold_block": "Block of Harvest Gold",
+  "block.rubros.harvest_gold_ore": "Harvest Gold Ore"
 }
