@@ -3,6 +3,7 @@ package net.gabs.rubros;
 import net.fabricmc.api.ModInitializer;
 
 import net.gabs.rubros.block.ModBlocks;
+import net.gabs.rubros.item.ModItemGroups;
 import net.gabs.rubros.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,7 @@ public class Rubros implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemGroups();
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
