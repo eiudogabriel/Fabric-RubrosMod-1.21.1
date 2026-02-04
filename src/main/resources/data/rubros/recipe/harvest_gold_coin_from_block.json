@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "harvest_gold_coin",
+  "ingredients": [
+    {
+      "item": "rubros:harvest_gold_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "rubros:harvest_gold_coin"
+  }
+}

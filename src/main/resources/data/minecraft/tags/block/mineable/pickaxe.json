@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "rubros:harvest_gold_block",
+    "rubros:harvest_gold_ore",
+    "rubros:harvest_gold_deepslate_ore"
+  ]
+}

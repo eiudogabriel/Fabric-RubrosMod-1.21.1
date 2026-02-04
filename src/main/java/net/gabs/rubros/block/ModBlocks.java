@@ -12,17 +12,25 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
 
     public static final Block HARVEST_GOLD_BLOCK = registerBlock("harvest_gold_block",
             new Block(AbstractBlock.Settings.create().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+
     public static final Block HARVEST_GOLD_ORE = registerBlock("harvest_gold_ore",
-            new ExperienceDroppingBlock(ConstantIntProvider.create(0),
-                    AbstractBlock.Settings.create().strength(4.5F, 3.0F)
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    AbstractBlock.Settings.create().strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+    public static final Block HARVEST_GOLD_DEEPSLATE_ORE = registerBlock("harvest_gold_deepslate_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
+                    AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+
+
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Rubros.MOD_ID, name), block);
@@ -33,6 +41,7 @@ public class ModBlocks {
                 new BlockItem(block, new Item.Settings()));
     }
 
+
     public static void registerModBlocks() {
         Rubros.LOGGER.info("Registering Mod Blocks for " + Rubros.MOD_ID);
 
@@ -42,6 +51,7 @@ public class ModBlocks {
         
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.add(ModBlocks.HARVEST_GOLD_ORE);
+            entries.add(ModBlocks.HARVEST_GOLD_DEEPSLATE_ORE);
         });
     }
 }
