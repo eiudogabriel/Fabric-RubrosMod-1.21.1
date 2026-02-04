@@ -1,9 +1,12 @@
 {
   "item.rubros.gold_coin": "Gold Coin",
   "item.rubros.harvest_gold_coin": "Harvest Gold Coin",
+  "item.rubros.chisel": "Chisel",
 
   "block.rubros.harvest_gold_block": "Block of Harvest Gold",
   "block.rubros.harvest_gold_ore": "Harvest Gold Ore",
+  "block.rubros.harvest_gold_deepslate_ore": "Harvest Gold Deepslate Ore",
 
-  "itemgroup.rubros.gold_generated_items": "Gold Generated"
+  "itemgroup.rubros.gold_generated_items": "Gold Generated",
+  "itemgroup.rubros.misc_items_group": "Misc"
 }
